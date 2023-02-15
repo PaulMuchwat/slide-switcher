@@ -33,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int switcherIndex1 = 0;
   int switcherIndex2 = 0;
   int switcherIndex3 = 0;
+  int switcherIndex4 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -127,6 +128,61 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontWeight: FontWeight.w600,
                     color: Colors.black,
                   ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            SlideSwitcher(
+              onSelect: (int index) => setState(() => switcherIndex4 = index),
+              containerColor: Colors.transparent,
+              containerBorder: Border.all(color: Colors.white),
+              slidersGradients: const [
+                LinearGradient(
+                  colors: [
+                    Color.fromRGBO(47, 105, 255, 1),
+                    Color.fromRGBO(188, 47, 255, 1),
+                  ],
+                ),
+                LinearGradient(
+                  colors: [
+                    Color.fromRGBO(47, 105, 255, 1),
+                    Color.fromRGBO(0, 192, 169, 1),
+                  ],
+                ),
+                LinearGradient(
+                  colors: [
+                    Color.fromRGBO(255, 41, 212, 1),
+                    Color.fromRGBO(105, 231, 240, 1),
+                  ],
+                ),
+              ],
+              indents: 9,
+              containerHeight: 50,
+              containerWight: 315,
+              children: [
+                Text(
+                  'First',
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: switcherIndex4 == 0
+                          ? Colors.white.withOpacity(0.9)
+                          : Colors.grey),
+                ),
+                Text(
+                  'Second',
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: switcherIndex4 == 1
+                          ? Colors.white.withOpacity(0.9)
+                          : Colors.grey),
+                ),
+                Text(
+                  'Third',
+                  style: TextStyle(
+                      fontSize: 15,
+                      color: switcherIndex4 == 2
+                          ? Colors.white.withOpacity(0.9)
+                          : Colors.grey),
                 ),
               ],
             ),
