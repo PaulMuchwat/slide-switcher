@@ -35,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int switcherIndex3 = 0;
   int switcherIndex4 = 0;
   int switcherIndex5 = 0;
+  int switcherIndex6 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -207,6 +208,47 @@ class _MyHomePageState extends State<MyHomePage> {
                     Icon(
                       Icons.settings,
                       color: Colors.white,
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 20),
+                SlideSwitcher(
+                  onSelect: (int index) =>
+                      setState(() => switcherIndex6 = index),
+                  slidersColors: const [Colors.white],
+                  containerHeight: 260,
+                  containerWight: 60,
+                  indents: 4,
+                  direction: Axis.vertical,
+                  containerColor: const Color.fromARGB(255, 48, 103, 155),
+                  children: const [
+                    Text(
+                      'First',
+                      style: TextStyle(
+                        color: Color.fromRGBO(53, 242, 53, 1),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      'Second',
+                      style: TextStyle(
+                        color: Color.fromRGBO(53, 242, 53, 1),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      'Third',
+                      style: TextStyle(
+                        color: Color.fromRGBO(53, 242, 53, 1),
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      'Forth',
+                      style: TextStyle(
+                        color: Color.fromRGBO(53, 242, 53, 1),
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ],
                 ),
