@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int switcherIndex2 = 0;
   int switcherIndex3 = 0;
   int switcherIndex4 = 0;
+  int switcherIndex5 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -186,6 +187,31 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ],
             ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                const SizedBox(width: 65),
+                SlideSwitcher(
+                  onSelect: (int index) =>
+                      setState(() => switcherIndex5 = index),
+                  direction: Axis.vertical,
+                  containerColor: const Color.fromRGBO(26, 188, 156, 1),
+                  slidersColors: const [Color.fromRGBO(60, 91, 85, 0.42)],
+                  containerHeight: 70,
+                  containerWight: 90,
+                  children: const [
+                    Icon(
+                      Icons.account_circle_rounded,
+                      color: Colors.white,
+                    ),
+                    Icon(
+                      Icons.settings,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
