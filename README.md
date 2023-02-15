@@ -2,8 +2,9 @@
 
 A simple switch widget. It can be fully customized with desired width, colors, text etc. It also maintains selection state.
 
-＜img src="./assets/images/screenshot1.png" width="200 " height="600"＞
 
+
+<img src="./assets/images/screenshot1.png" width=393 height=851>
 
 ## Features
 
