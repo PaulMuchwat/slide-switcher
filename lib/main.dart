@@ -31,6 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int switcherIndex1 = 0;
+  int switcherIndex2 = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +55,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 Container(),
                 Container(),
               ],
-            )
+            ),
+            const SizedBox(height: 20),
+            SlideSwitcher(
+              containerColor: Colors.cyan,
+              onSelect: (int index) => setState(() => switcherIndex2 = index),
+              containerHeight: 40,
+              containerWight: 350,
+              children: [
+                Text(
+                  'First',
+                  style: TextStyle(
+                    fontWeight:
+                        switcherIndex2 == 0 ? FontWeight.w500 : FontWeight.w400,
+                    color: switcherIndex2 == 0 ? Colors.cyan : Colors.white,
+                  ),
+                ),
+                Text(
+                  'Second',
+                  style: TextStyle(
+                    fontWeight:
+                        switcherIndex2 == 1 ? FontWeight.w500 : FontWeight.w400,
+                    color: switcherIndex2 == 1 ? Colors.cyan : Colors.white,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
