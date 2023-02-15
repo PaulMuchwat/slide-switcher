@@ -31,7 +31,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int switcherIndex1 = 0;
-  int switcherIndex2 = 1;
+  int switcherIndex2 = 0;
+  int switcherIndex3 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +78,54 @@ class _MyHomePageState extends State<MyHomePage> {
                     fontWeight:
                         switcherIndex2 == 1 ? FontWeight.w500 : FontWeight.w400,
                     color: switcherIndex2 == 1 ? Colors.cyan : Colors.white,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            SlideSwitcher(
+              initialIndex: 2,
+              onSelect: (int index) => setState(() => switcherIndex3 = index),
+              containerBorderRadius: 0,
+              indents: 10,
+              containerBorder: Border.all(
+                width: 3,
+                color: const Color(0xffFFFFE3),
+              ),
+              containerColor:
+                  const Color.fromARGB(255, 214, 226, 144).withOpacity(0.8),
+              slidersColors: const [
+                Color(0xffFFFFE3),
+              ],
+              containerHeight: 50,
+              containerWight: 350,
+              children: const [
+                Text(
+                  'First',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                Text(
+                  'Second',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                Text(
+                  'Third',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+                Text(
+                  'Forth',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
                   ),
                 ),
               ],
