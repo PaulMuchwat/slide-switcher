@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Slide Switcher',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white10.withOpacity(0.27),
       ),
@@ -36,6 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int switcherIndex4 = 0;
   int switcherIndex5 = 0;
   int switcherIndex6 = 0;
+  int switcherIndex7 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -211,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                const SizedBox(width: 20),
+                const SizedBox(width: 30),
                 SlideSwitcher(
                   onSelect: (int index) =>
                       setState(() => switcherIndex6 = index),
@@ -248,6 +250,41 @@ class _MyHomePageState extends State<MyHomePage> {
                       style: TextStyle(
                         color: Color.fromRGBO(53, 242, 53, 1),
                         fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 40),
+                SlideSwitcher(
+                  direction: Axis.vertical,
+                  containerColor: Colors.amber,
+                  slidersColors: const [Colors.transparent],
+                  slidersBorder: Border.all(color: Colors.white, width: 2),
+                  containerBorder: Border.all(color: Colors.white, width: 2),
+                  containerHeight: 300,
+                  containerWight: 40,
+                  indents: 5,
+                  onSelect: (int index) =>
+                      setState(() => switcherIndex7 = index),
+                  children: const [
+                    RotatedBox(
+                      quarterTurns: -1,
+                      child: Text(
+                        'First',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    RotatedBox(
+                      quarterTurns: -1,
+                      child: Text(
+                        'Second',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                     ),
                   ],
