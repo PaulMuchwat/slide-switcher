@@ -1,16 +1,33 @@
 # slide_switcher
 
-A new Flutter project.
+A simple switch widget. It can be fully customized with desired width, colors, text etc. It also maintains selection state.
+
+
+
+<img src="./assets/images/screenshot1.png" width=393 height=851>
+
+## Features
+
+- Slide-switcher
+- Customizable to fit your use-case
+- Lightweight, easy to integrate with other apps
+- Open-source
+
+## Prerequisites
+
+- Flutter SDK
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository
+2. Run `flutter pub get` to install dependencies
+3. Run the app on an emulator or physical device
 
-A few resources to get you started if this is your first Flutter project:
+The UI can be further customized to fit your use-case by modifying the code in the `main.dart` file and other files.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Development by
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter - https://flutter.dev/
+
+Please open an issues on the repository if you find any bugs or if you would like to contribute.
+
